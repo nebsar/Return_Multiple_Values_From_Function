@@ -52,7 +52,17 @@ int main(int argc, char** argv) {
 
     std::tie(num, chr, name) = getTuple(false);
     std::cout << num << " " << chr << ' ' << name + '\n';
+    ///////////////////////////////////////////////////////////////////////////////
 
+    //////////////////// ANOTHER WAY OF USING TUPLE /////////////////////////////
+
+    auto res = getTuple(true);
+
+    num = std::get<0>(res);
+    chr = std::get<1>(res);
+    name = std::get<2>(res);
+    
+    std::cout << num << " " << chr << ' ' << name + '\n';
 
 
     return 0;
